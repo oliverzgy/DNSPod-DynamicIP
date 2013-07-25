@@ -1,8 +1,12 @@
 DNSPod-DynamicIP
 ================
 
+DNSPod.cn域名IP（A记录）定期（30秒）更新Python脚本。
+
 使用说明
 --------
+
+在DNSPod.cn创建需要更新的域名的A记录，并通过下面的方法查询domian_id以及对应的record_id
 
 Windows & Linux: 
 
