@@ -1,10 +1,38 @@
 DNSPod-DynamicIP
 ================
 
-替换上你的Email，密码，域名ID，记录ID等参数，就可以运行了。 会在后台一直运行，每隔30秒检查一遍IP，如果修改了就更新IP。
+使用说明
+--------
 
-获得domain_id可以用curl curl -k https://dnsapi.cn/Domain.List -d "login_email=xxx&login_password=xxx"
+Windows & Linux: 
 
-获得record_id类似 curl -k https://dnsapi.cn/Record.List -d "login_email=xxx&login_password=xxx&domain_id=xxx"
+> python ddnspod.py
+
+Linux (Ubuntu) 自动启动服务:
+
+将ddnsdaemon放置到/ect/init.d/，并给予可运行权限，然后
+
+> sudo update_rc.d ddnsdaimon defaults 
+
+
+ddnspod.py
+----------
+
+替换上你的DNSPod.cn帐号Email，密码，域名ID，记录ID等参数，就可以运行了。 会在后台一直运行，每隔30秒检查一遍IP，如果修改了就更新IP。
+
+获得domain_id可以用
+
+> curl curl -k https://dnsapi.cn/Domain.List -d "login_email=xxx&login_password=xxx"
+
+获得record_id类似 
+
+> curl -k https://dnsapi.cn/Record.List -d "login_email=xxx&login_password=xxx&domain_id=xxx"
 
 代码来源：https://gist.github.com/chuangbo/833369
+
+ddnsdaemon
+----------
+
+Linux服务器启动脚本。将ddnspod.py放置到/opt/ddnspod/即可，或者修改指定ddnspod.py访问的路径。
+
+代码来源：https://github.com/iceleaf916/PyDDnsPod/blob/master/ddnspod-daemon
