@@ -40,3 +40,8 @@ ddnsdaemon
 Linux服务器启动脚本。将ddnspod.py放置到/opt/ddnspod/即可，或者修改指定ddnspod.py访问的路径。
 
 代码来源：https://github.com/iceleaf916/PyDDnsPod/blob/master/ddnspod-daemon
+
+License
+-------
+
+GNU Affero General Public License
