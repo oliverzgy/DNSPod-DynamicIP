@@ -16,7 +16,7 @@ Linux (Ubuntu) 自动启动服务:
 
 将ddnsdaemon放置到/ect/init.d/，并给予可运行权限，然后
 
-> sudo update-rc.d ddnsdaimon defaults 
+> sudo update-rc.d ddnsdaemon defaults 
 
 
 ddnspod.py
